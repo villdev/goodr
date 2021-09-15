@@ -1,0 +1,10 @@
+export { default as Login } from "./Login";
+export { default as SignUp } from "./Signup";
+export { default as Feed } from "./Feed";
+export { default as PostDetails } from "./PostDetails";
+export { default as Explore } from "./Explore";
+export { default as Notifications } from "./Notifications";
+export { default as Profile } from "./Profile";
+export { default as Following } from "./Following";
+export { default as Followers } from "./Followers";
+export { default as Settings } from "./Settings";
