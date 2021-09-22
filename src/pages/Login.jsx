@@ -23,6 +23,15 @@ export default function Login() {
         dispatch(loginUserWithCredentials(logInCred));
     };
 
+    const loginAsGuest = () => {
+        dispatch(
+            loginUserWithCredentials({
+                email: 'testing@dev.com',
+                password: 'Password@123'
+            })
+        );
+    };
+
     useEffect(() => {
         dispatch(resetStatus());
         isAuthenticated && navigate('/');
@@ -62,11 +71,20 @@ export default function Login() {
                                 'Login'
                             )}
                         </button>
+                        <button
+                            onClick={(e) => {
+                                e.preventDefault();
+                                loginAsGuest();
+                            }}
+                            className="block text-center border border-gray-800 text-gray-800 p-2 duration-300 rounded hover:bg-black hover:text-white w-full"
+                        >
+                            Login as Guest
+                        </button>
                     </form>
                     <p className="mt-12 text-sm text-center font-normal text-gray-900">
                         {' '}
                         Don't have an account?{' '}
-                        <Link to="/login" className="text-black font-medium">
+                        <Link to="/signup" className="text-black font-medium">
                             {' '}
                             Create One{' '}
                         </Link>{' '}

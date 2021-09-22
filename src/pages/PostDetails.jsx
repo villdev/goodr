@@ -75,10 +75,10 @@ export default function PostDetails() {
                             <textarea
                                 value={comment}
                                 onChange={(e) => setComment(e.target.value)}
-                                className="bg-gray-50 w-full p-2 rounded"
-                                placeholder="Comment..."
+                                className="bg-gray-50 w-full p-2 rounded comment-textarea"
+                                placeholder="Write your comment..."
                             />
-                            <div className="flex justify-end border-b">
+                            <div className="flex justify-end border-b py-2">
                                 <button
                                     onClick={() => makeCommentHandler()}
                                     className="border-2 border-blue-600 text-blue-700 hover:bg-blue-600 hover:text-white px-2 py-1 my-1 mx-2 w-24 rounded"
@@ -92,7 +92,10 @@ export default function PostDetails() {
                             </div>
                             <div>
                                 {singlePost.comments.map((item) => (
-                                    <div key={item._id} className="border-b">
+                                    <div
+                                        key={item._id}
+                                        className="border-b mt-4"
+                                    >
                                         <div className="flex items-center justify-between">
                                             <div className="flex items-center">
                                                 <div className="my-2">
@@ -120,7 +123,7 @@ export default function PostDetails() {
                                                         />
                                                     )}
                                                 </div>
-                                                <div className="ml-6">
+                                                <div className="ml-3">
                                                     <h4 className="text-lg font-semibold">
                                                         {item.commentBy.name}
                                                     </h4>
@@ -142,7 +145,7 @@ export default function PostDetails() {
                                                                 item._id
                                                             )
                                                         }
-                                                        className="text-xs w-16 font-semibold border-2 border-red-600 text-red-700 hover:bg-red-600 hover:text-white px-2 py-1 my-1 mx-2 rounded"
+                                                        className="text-xs w-24 font-semibold border-2 border-red-600 text-red-700 hover:bg-red-600 hover:text-white px-2 py-1 my-1 mx-2 rounded"
                                                     >
                                                         Delete
                                                     </button>

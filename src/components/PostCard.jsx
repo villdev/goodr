@@ -44,7 +44,7 @@ export const PostCard = ({ post }) => {
     };
 
     return (
-        <div className="my-4 bg-white rounded-md">
+        <div className="my-4 bg-white rounded-md shadow">
             <div className="p-3 border-b">
                 <div className="flex justify-between">
                     <Link
@@ -66,17 +66,17 @@ export const PostCard = ({ post }) => {
                                 />
                             )}
                             <div className="ml-3 leading-4">
-                                <h4 className="font-medium">
+                                <h4 className="font-semibold">
                                     {post.creator.name}
                                 </h4>
-                                <span className="text-sm font-medium text-gray-500">
+                                <span className="text-sm font-semibold text-gray-400">
                                     @{post.creator.username}
                                 </span>
                             </div>
                         </div>
                     </Link>
                     <div>
-                        <span className="text-xs font-medium text-gray-600">
+                        <span className="text-xs font-medium text-gray-500">
                             {getTimeAgo(post.createdAt)} ago
                         </span>
                     </div>
@@ -99,7 +99,7 @@ export const PostCard = ({ post }) => {
                     title="Like"
                 >
                     <i
-                        className={`text-lg bx ${
+                        className={`text-base bx ${
                             isPostAlreadyLiked
                                 ? 'bxs-heart text-red-600'
                                 : 'bx-heart'

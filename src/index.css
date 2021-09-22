@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+.nav-actions {
+    display: flex;
+}
+
+.new-post-textarea {
+    resize: none;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+}
+.new-post-textarea::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+}
+.new-post-wrapper {
+    padding-left: 1rem;
+}
+
+.comment-textarea {
+    resize: none;
+}

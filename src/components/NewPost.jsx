@@ -45,8 +45,8 @@ export const NewPost = () => {
 
     return (
         <div>
-            <div className="bg-white rounded-md p-4">
-                <div className="flex items-center justify-between px-2">
+            <div className="bg-white shadow rounded-md p-4 new-post-wrapper">
+                <div className="flex items-center justify-between">
                     {user?.profilePhoto ? (
                         <img
                             className="w-10 h-auto rounded-md"
@@ -68,10 +68,10 @@ export const NewPost = () => {
                     <textarea
                         maxLength={max}
                         type="text"
-                        placeholder="What's new?"
+                        placeholder="What's happening?"
                         value={content}
                         onChange={(e) => setContent(e.target.value)}
-                        className="bg-gray-50 w-full mx-2 px-1 rounded-md"
+                        className="bg-gray-50 w-full px-1 rounded-md new-post-textarea"
                     />
                     {postMedia && (
                         <img
@@ -81,7 +81,7 @@ export const NewPost = () => {
                         />
                     )}
                 </div>
-                <div className="flex justify-end">
+                <div className="flex justify-end mt-4">
                     <div className="my-2 mr-4">
                         <label className="bg-white text-blue px-4 py-2 rounded border border-blue cursor-pointer hover:bg-blue-400 hover:text-white">
                             <span className="mt-2 text-base leading-normal my-2">

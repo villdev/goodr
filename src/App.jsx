@@ -16,7 +16,8 @@ import {
     Following,
     Followers,
     PostDetails,
-    Notifications
+    Notifications,
+    SignUp
 } from './pages';
 
 function App() {
@@ -59,12 +60,11 @@ function App() {
     return (
         <div>
             {isAuthenticated && <Navbar />}
-            <div
-                className={`md:ml-0 ${isAuthenticated && 'md:ml-72 lg:mr-72'}`}
-            >
+            <div className={`md:ml-0 ${isAuthenticated && 'md:ml lg:mr'}`}>
                 <div className="p-2 my-16 max-w-3xl mx-auto">
                     <Routes>
                         <Route path="/login" element={<Login />} />
+                        <Route path="/signup" element={<SignUp />} />
                         <PrivateRoute path="/" element={<Feed />} />
                         <PrivateRoute
                             path="feed/:postId"

@@ -29,7 +29,9 @@ export const ProfileCard = ({ profile }) => {
                         )}
                     </div>
                     <div className="ml-6">
-                        <h4 className="text-lg">{profile.name}</h4>
+                        <h4 className="text-lg font-semibold">
+                            {profile.name}
+                        </h4>
                         <span className="text-sm font-medium text-gray-500">
                             @{profile.username}
                         </span>

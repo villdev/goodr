@@ -49,14 +49,14 @@ export const ProfileHeader = ({ profile, profilePosts }) => {
                         <div className="flex my-2">
                             <div className="font-semibold">
                                 {profilePosts?.length || 0}
-                                <span className="text-gray-400 text-sm ml-1">
+                                <span className="text-gray-400 text-base font-light ml-1">
                                     posts
                                 </span>
                             </div>
                             <Link to="followers">
                                 <div className="font-semibold ml-6">
                                     {profile?.followers?.length}
-                                    <span className="text-gray-400 text-sm ml-1">
+                                    <span className="text-gray-400 text-base font-light ml-1">
                                         Followers
                                     </span>
                                 </div>
@@ -64,7 +64,7 @@ export const ProfileHeader = ({ profile, profilePosts }) => {
                             <Link to="following">
                                 <div className="font-semibold ml-6">
                                     {profile?.following?.length}
-                                    <span className="text-gray-400 text-sm ml-1">
+                                    <span className="text-gray-400 text-base font-light ml-1">
                                         Following
                                     </span>
                                 </div>
